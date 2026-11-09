@@ -1,12 +1,12 @@
-
-import { For, createSignal, Show } from "solid-js";
+import {Header} from "./Header"
+import { Route } from "@solidjs/router"
 import "./css/style.css"
-
 const App = () => {
-  return (
-    <>
-    </>
-  )
-};
+    return (
+        <>
+            <Header />
+        </>
+    )    
+}
 
-export default App;
+export default App
