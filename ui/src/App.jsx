@@ -1,6 +1,5 @@
-
-import { For, createSignal, Show } from "solid-js";
-import "./css/style.css"
+import Card from "./Card";
+import "./css/style.css";
 
 const App = () => {
   return (
