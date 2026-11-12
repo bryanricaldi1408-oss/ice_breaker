@@ -1,11 +1,17 @@
+import {Header} from "./Header"
+import { Route, Router } from "@solidjs/router"
 import Card from "./Card";
-import "./css/style.css";
+import Home from "./Home"
+import "./css/style.css"
 
 const App = () => {
-  return (
-    <>
-    </>
-  )
-};
+    return (
+        <>
+            <Router root={Header}>
+                <Route path="/" component={Home} />
+            </Router> 
+        </>
+    )    
+}
 
-export default App;
+export default App
