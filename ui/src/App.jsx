@@ -1,10 +1,13 @@
 import {Header} from "./Header"
-import { Route } from "@solidjs/router"
+import { Route, Router } from "@solidjs/router"
+import Home from "./Home"
 import "./css/style.css"
 const App = () => {
     return (
         <>
-            <Header />
+            <Router root={Header}>
+                <Route path="/" component={Home} />
+            </Router> 
         </>
     )    
 }
