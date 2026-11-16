@@ -48,7 +48,7 @@ const Home = () => {
                         Participants
                     </button>
                     {/* Garis pemisah */}
-                    <div class="w-[1px] self-stretch bg-[#F72585]/40 my-1"></div>
+                    <div class="w-px self-stretch bg-[#F72585]/40 my-1"></div>
                     <button
                         onClick={() => setRole("host")}
                         class={`text-[#F72585] text-2xl font-bold py-3 
