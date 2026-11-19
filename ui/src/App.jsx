@@ -12,6 +12,7 @@ const App = () => {
             <Router root={Header}>
                 <Route path="/" component={Home} />
                 <Route path="/room-code" component={RoomCode} />
+                <Route path="/display-code" component={DisplayCode} />
             </Router> 
         </>
     )    
