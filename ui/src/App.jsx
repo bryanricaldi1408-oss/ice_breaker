@@ -1,14 +1,20 @@
-
-import { For, createSignal, Show } from "solid-js";
+import {Header} from "./Header"
+import { Route, Router } from "@solidjs/router"
+import Card from "./Card";
+import Home from "./Home"
+import RoomCode from "./RoomCode";
 import "./css/style.css"
 import DisplayCode from "./DisplayCode"
 
 const App = () => {
-  return (
-    <>
-      <DisplayCode />
-    </>
-  )
-};
+    return (
+        <>
+            <Router root={Header}>
+                <Route path="/" component={Home} />
+                <Route path="/room-code" component={RoomCode} />
+            </Router> 
+        </>
+    )    
+}
 
-export default App;
+export default App
