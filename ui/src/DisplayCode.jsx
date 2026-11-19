@@ -6,27 +6,6 @@ const DisplayCode = () => {
                 <p className="text-base font-semibold">Scan the QR code or enter the room code to join the game</p>
                 
                 {/* teams and QR code */}
-<<<<<<< HEAD
-                <div className="grid grid-cols-3 gap-4">
-                    {/* teams */}
-                    <div className="col-span-2 border rounded-lg border-[#F72585]">
-                        {/* name       info */}
-                        {/* every div has their team name and info */}
-                        
-                        {/* header */}
-                        <div className="grid grid-cols-2">
-                            <h3 className="text-2xl font-semibold">Teams</h3>
-                            {/* info */}
-                            <span className="bg-[#F72585] text-white rounded-lg p-0.5 col-start-2">[17] players joined</span>
-                        </div>
-                    </div>
-
-                    {/* QR Code */}
-                    <div className="">
-
-                    </div>
-                </div>
-=======
                 <div className="justify-items-center flex gap-5">
                     {/* teams */}
                     <div className="overflow-y-auto box-border h-64 border border-[#F72585] rounded-lg px-3">
@@ -111,7 +90,6 @@ const DisplayCode = () => {
                 <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-175">
                     Start Game
                 </button>
->>>>>>> 2306a31cac9ccb772699feb15d1e9efc0f77e400
             </div>
         </>
     )
