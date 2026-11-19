@@ -72,21 +72,23 @@ const DisplayCode = () => {
                     </div>
 
                     {/* QR Code */}
-                    <div className="flex flex-col items-center">
-                        <div className="bg-black h-50 w-50">
+                    <div className="flex flex-col items-center gap-5">
+                        <div className="bg-black h-40 w-40">
                             Test
                         </div>
-                        <span className="text-xl">
-                            Room Code:
-                        </span>
-                        <span className="font-bold text-2xl">
-                            123456
-                        </span>
+                        <div className="flex flex-col items-center">
+                            <p className="text-xl">
+                                Room Code:
+                            </p>
+                            <p className="font-bold text-2xl">
+                                123456
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <button>
-                    Start game
+                <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-175">
+                    Start Game
                 </button>
             </div>
         </>
