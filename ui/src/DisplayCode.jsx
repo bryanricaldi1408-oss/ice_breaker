@@ -6,19 +6,68 @@ const DisplayCode = () => {
                 <p className="text-base font-semibold">Scan the QR code or enter the room code to join the game</p>
                 
                 {/* teams and QR code */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="justify-items-center border border-[#F72585] rounded-lg px-3 overflow-y-auto box-border h-64">
                     {/* teams */}
-                    <div className="col-span-2 border rounded-lg border-[#F72585]">
-                        {/* name       info */}
-                        {/* every div has their team name and info */}
-                        
-                        {/* header */}
-                        <div className="grid grid-cols-2">
-                            <h3 className="text-2xl font-semibold">Teams</h3>
-                            {/* info */}
-                            <span className="bg-[#F72585] text-white rounded-lg p-0.5 col-start-2">[17] players joined</span>
-                        </div>
-                    </div>
+                    <table className="border-separate border-spacing-y-4">
+                        <tr>
+                            <th className="pe-50">
+                                <span className="text-3xl font-medium p">Teams</span>
+                            </th>
+                            <th className="ps-8s">
+                                <span className="bg-[#F72585] text-white p-1 rounded-md font-medium py-0.5 px-2">17 players joined</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span className="font-medium">Team Alpha</span>
+                                <br />
+                                6 Players
+                            </td>
+                            <td className="grid justify-items-end">
+                                <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span className="font-medium">Team Alpha</span>
+                                <br />
+                                6 Players
+                            </td>
+                            <td className="grid justify-items-end">
+                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span className="font-medium">Team Alpha</span>
+                                <br />
+                                6 Players
+                            </td>
+                            <td className="grid justify-items-end">
+                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span className="font-medium">Team Alpha</span>
+                                <br />
+                                6 Players
+                            </td>
+                            <td className="grid justify-items-end">
+                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span className="font-medium">Team Alpha</span>
+                                <br />
+                                6 Players
+                            </td>
+                            <td className="grid justify-items-end">
+                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                            </td>
+                        </tr>
+                    </table>
 
                     {/* QR Code */}
                     <div className="">
