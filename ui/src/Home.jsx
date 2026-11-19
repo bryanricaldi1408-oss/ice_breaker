@@ -1,6 +1,7 @@
-import { createSignal } from "solid-js"
+import { createSignal, For } from "solid-js"
 import Card from "./Card"
-
+import bgImage from "./assets/bg.png"
+import { useNavigate } from "@solidjs/router"
 const roleContent = {
 
     participants: {
@@ -28,36 +29,58 @@ const roleContent = {
     },
 }
 const Home = () => {
-    const [role, setRole] = createSignal("")
+    const [role, setRole] = createSignal("participants")
+    const current = () => roleContent[role()]
+    const navigate = useNavigate()
+
     return (
         <>
-            <main class="flex flex-col h-screen w-screen items-center my-7">
-                <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
+            <main class="flex flex-col min-h-screen w-screen items-center mt-7">
+                <div class="min-h-screen w-[85%] flex flex-col items-center">
+                    <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
 
-                {/* Tombol Participants atau Host */}
-                <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
-                    <button
-                        onClick={() => setRole("participants")} 
-                        class={`text-[#F72585] text-2xl font-bold py-3 
-                        px-8 rounded-xl cursor-pointer
-                        ${role() == "participants" ? "bg-white shadow-xs" : ""}`}>
-                        Participants
-                    </button>
-                    {/* Garis pemisah */}
-                    <div class="w-[1px] self-stretch bg-[#F72585]/40 my-1"></div>
-                    <button
-                        onClick={() => setRole("host")}
-                        class={`text-[#F72585] text-2xl font-bold py-3 
-                        px-8 rounded-xl cursor-pointer
-                        ${role() == "host" ? "bg-white shadow-xs" : ""}`}>
+                    {/* Tombol Participants atau Host */}
+                    <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
+                        <button
+                            onClick={() => setRole("participants")} 
+                            class={`text-[#F72585] text-2xl font-bold py-3 
+                            px-8 rounded-xl cursor-pointer
+                            ${role() == "participants" ? "bg-white shadow-xs" : ""}`}>
+                            Participants
+                        </button>
+                        {/* Garis pemisah */}
+                        <div class="w-[1px] self-stretch bg-[#F72585]/40 my-1"></div>
+                        <button
+                            onClick={() => setRole("host")}
+                            class={`text-[#F72585] text-2xl font-bold py-3 
+                            px-8 rounded-xl cursor-pointer
+                            ${role() == "host" ? "bg-white shadow-xs" : ""}`}>
+                            Host
+                        </button>
+                    </div>
 
-                        Host
-                    </button>
+                    {/* Steps */}
+                    <div class="flex flex-col items-center gap-5">
+                        <p class="text-center text-sm font-medium">{current().subtitle}</p>
+                        <div class="flex flex-1 flex-row flex-wrap w-full justify-center items-stretch gap-5">
+                            <For each={current().steps}>
+                                {(item, index) => (
+                                    <Card
+                                        number={item.number}
+                                        step={item.step}
+                                        desc={item.desc}
+                                    />
+                                )}
+                            </For>
+                        </div>
+                    </div>
+                    <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-full">{current().buttonText}</button>
                 </div>
 
-                {/* Five Simple Steps */}
-                <div>
-
+                <div style={{"background-image" : `url(${bgImage})`}}
+                class="bg-cover bg-center bg-no-repeat min-h-screen w-screen"
+                >
+                    
                 </div>
             </main>
         </>
