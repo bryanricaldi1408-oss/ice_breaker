@@ -6,74 +6,88 @@ const DisplayCode = () => {
                 <p className="text-base font-semibold">Scan the QR code or enter the room code to join the game</p>
                 
                 {/* teams and QR code */}
-                <div className="justify-items-center border border-[#F72585] rounded-lg px-3 overflow-y-auto box-border h-64">
+                <div className="justify-items-center flex gap-5">
                     {/* teams */}
-                    <table className="border-separate border-spacing-y-4">
-                        <tr>
-                            <th className="pe-50">
-                                <span className="text-3xl font-medium p">Teams</span>
-                            </th>
-                            <th className="ps-8s">
-                                <span className="bg-[#F72585] text-white p-1 rounded-md font-medium py-0.5 px-2">17 players joined</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span className="font-medium">Team Alpha</span>
-                                <br />
-                                6 Players
-                            </td>
-                            <td className="grid justify-items-end">
-                                <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span className="font-medium">Team Alpha</span>
-                                <br />
-                                6 Players
-                            </td>
-                            <td className="grid justify-items-end">
+                    <div className="overflow-y-auto box-border h-64 border border-[#F72585] rounded-lg px-3">
+                        <table className="border-separate border-spacing-y-4">
+                            <tr>
+                                <th className="pe-50">
+                                    <span className="text-3xl font-medium p">Teams</span>
+                                </th>
+                                <th className="ps-8s">
+                                    <span className="bg-[#F72585] text-white p-1 rounded-md font-medium py-0.5 px-2">17 players joined</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span className="font-medium">Team Alpha</span>
+                                    <br />
+                                    6 Players
+                                </td>
+                                <td className="grid justify-items-end">
                                     <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span className="font-medium">Team Alpha</span>
-                                <br />
-                                6 Players
-                            </td>
-                            <td className="grid justify-items-end">
-                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span className="font-medium">Team Alpha</span>
-                                <br />
-                                6 Players
-                            </td>
-                            <td className="grid justify-items-end">
-                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span className="font-medium">Team Alpha</span>
-                                <br />
-                                6 Players
-                            </td>
-                            <td className="grid justify-items-end">
-                                    <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
-                            </td>
-                        </tr>
-                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span className="font-medium">Team Alpha</span>
+                                    <br />
+                                    6 Players
+                                </td>
+                                <td className="grid justify-items-end">
+                                        <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span className="font-medium">Team Alpha</span>
+                                    <br />
+                                    6 Players
+                                </td>
+                                <td className="grid justify-items-end">
+                                        <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span className="font-medium">Team Alpha</span>
+                                    <br />
+                                    6 Players
+                                </td>
+                                <td className="grid justify-items-end">
+                                        <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span className="font-medium">Team Alpha</span>
+                                    <br />
+                                    6 Players
+                                </td>
+                                <td className="grid justify-items-end">
+                                        <span className="bg-[#F72585] text-white py-0.5 px-5 rounded-md">Joined</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
                     {/* QR Code */}
-                    <div className="">
-
+                    <div className="flex flex-col items-center">
+                        <div className="bg-black h-50 w-50">
+                            Test
+                        </div>
+                        <span className="text-xl">
+                            Room Code:
+                        </span>
+                        <span className="font-bold text-2xl">
+                            123456
+                        </span>
                     </div>
                 </div>
+
+                <button>
+                    Start game
+                </button>
             </div>
         </>
     )
