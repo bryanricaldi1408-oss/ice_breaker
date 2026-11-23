@@ -1,5 +1,5 @@
 
-export const Header = (props) => {
+export const Header = () => {
   return (
     <>
       <div class="bg-[#7209B7] w-screen flex gap-7 p-4">
@@ -9,7 +9,6 @@ export const Header = (props) => {
           <li><p class="text-white">Make</p></li>
         </ul>
       </div>
-      {props.children}
     </>
   )
 }

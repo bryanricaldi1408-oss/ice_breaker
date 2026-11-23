@@ -1,5 +1,6 @@
 import { createSignal } from "solid-js";
 import { Index } from "solid-js";
+import { useNavigate } from "@solidjs/router"
 
 function CreateGameForm() {
   const [teamCount, setTeamCount] = createSignal(2);
@@ -41,10 +42,12 @@ function CreateGameForm() {
     });
   };
 
+  const navigate = useNavigate()
+
   return (
     <main class="flex flex-col min-h-screen w-screen items-center mt-7">
         <div class="min-h-screen w-[85%] flex flex-col items-center space-y-4">
-            <p class="text-center text-5xl font-semibold text-[#7209B7] mt-7">Let's set up your game!</p>
+            <p class="text-center text-4xl font-bold text-[#7209B7] mt-7">Let's set up your game!</p>
             <p class="text-center text-lg font-medium">A few quick details before the fun begins</p>
 
             <form id="create-game-form" method="POST" onSubmit={handleSubmit} class="bg-[#C6E4F9] p-6 space-y-4 rounded-[10px] w-full max-w-md">
@@ -91,7 +94,7 @@ function CreateGameForm() {
                 </div>
             </form>
           <div class="w-full max-w-md mt-2">
-              <button class="type= submit bg-[#7209B7] rounded-[10px] w-full py-2">
+              <button onClick={() => navigate("/display-code")} class="type= submit bg-[#7209B7] rounded-[10px] w-full py-2">
                 <p class="text-xl font-medium text-white">Continue to Lobby →</p> 
               </button>
           </div>

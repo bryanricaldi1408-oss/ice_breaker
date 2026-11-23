@@ -1,7 +1,9 @@
+
 import { createSignal, For } from "solid-js"
 import Card from "./Card"
 import bgImage from "./assets/bg.png"
 import { useNavigate } from "@solidjs/router"
+import RectangleGrid from "./RectangleGrid"
 const roleContent = {
 
     participants: {
@@ -35,8 +37,8 @@ const Home = () => {
 
     return (
         <>
-            <main class="flex flex-col min-h-screen w-screen items-center mt-7">
-                <div class="min-h-screen w-[85%] flex flex-col items-center">
+            <main class="flex flex-col h-auto w-screen items-center mt-7">
+                <div class="w-[65%] flex flex-col items-center mb-19">
                     <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
 
                     {/* Tombol Participants atau Host */}
@@ -74,13 +76,17 @@ const Home = () => {
                             </For>
                         </div>
                     </div>
-                    <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-full">{current().buttonText}</button>
+                    <button onClick={() => navigate(role() === "host" ? "/create-game" : "/room-code")}  class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-full">{current().buttonText}</button>
                 </div>
 
                 <div style={{"background-image" : `url(${bgImage})`}}
-                class="bg-cover bg-center bg-no-repeat min-h-screen w-screen"
+                class="bg-cover bg-center bg-no-repeat w-screen flex justify-center"
                 >
-                    
+                    <div class="w-[60%] flex flex-col gap-12 m-16">
+                        <p class="text-center font-jakarta-sans text-white font-bold text-5xl">What can you play?</p>
+                        <p class="text-center font-jakarta-sans text-white text-xl">Four types of challenges, endless ways to connect. What will your next turn bring?</p>
+                        <RectangleGrid />
+                    </div>
                 </div>
             </main>
         </>
