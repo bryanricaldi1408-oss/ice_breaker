@@ -76,7 +76,7 @@ const Home = () => {
                             </For>
                         </div>
                     </div>
-                    <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-full">{current().buttonText}</button>
+                    <button onClick={() => navigate(role() === "host" ? "/create-game" : "/room-code")}  class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-full">{current().buttonText}</button>
                 </div>
 
                 <div style={{"background-image" : `url(${bgImage})`}}
