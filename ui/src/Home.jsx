@@ -82,9 +82,9 @@ const Home = () => {
                 <div style={{"background-image" : `url(${bgImage})`}}
                 class="bg-cover bg-center bg-no-repeat w-screen flex justify-center"
                 >
-                    <div class="w-[60%]">
-                        <p class="text-center font-jakarta-sans text-white m-17 font-bold text-5xl">What can you play?</p>
-                        <p class="text-center font-jakarta-sans text-white m-17 text-xl">Four types of challenges, endless ways to connect. What will your next turn bring?</p>
+                    <div class="w-[60%] flex flex-col gap-12 m-16">
+                        <p class="text-center font-jakarta-sans text-white font-bold text-5xl">What can you play?</p>
+                        <p class="text-center font-jakarta-sans text-white text-xl">Four types of challenges, endless ways to connect. What will your next turn bring?</p>
                         <RectangleGrid />
                     </div>
                 </div>
