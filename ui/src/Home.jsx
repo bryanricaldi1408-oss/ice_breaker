@@ -1,7 +1,9 @@
+
 import { createSignal, For } from "solid-js"
 import Card from "./Card"
 import bgImage from "./assets/bg.png"
 import { useNavigate } from "@solidjs/router"
+import RectangleGrid from "./RectangleGrid"
 const roleContent = {
 
     participants: {
@@ -35,29 +37,29 @@ const Home = () => {
 
     return (
         <>
-            <main class="flex flex-col min-h-screen w-screen items-center mt-7">
-                <div class="min-h-screen w-[85%] flex flex-col items-center">
+            <main class="flex flex-col h-auto w-screen items-center mt-7">
+                <div class="w-[65%] flex flex-col items-center mb-19">
                     <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
 
-                {/* Tombol Participants atau Host */}
-                <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
-                    <button
-                        onClick={() => setRole("participants")} 
-                        class={`text-[#F72585] text-2xl font-bold py-3 
-                        px-8 rounded-xl cursor-pointer
-                        ${role() == "participants" ? "bg-white shadow-xs" : ""}`}>
-                        Participants
-                    </button>
-                    {/* Garis pemisah */}
-                    <div class="w-px self-stretch bg-[#F72585]/40 my-1"></div>
-                    <button
-                        onClick={() => setRole("host")}
-                        class={`text-[#F72585] text-2xl font-bold py-3 
-                        px-8 rounded-xl cursor-pointer
-                        ${role() == "host" ? "bg-white shadow-xs" : ""}`}>
-                        Host
-                    </button>
-                </div>
+                    {/* Tombol Participants atau Host */}
+                    <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
+                        <button
+                            onClick={() => setRole("participants")} 
+                            class={`text-[#F72585] text-2xl font-bold py-3 
+                            px-8 rounded-xl cursor-pointer
+                            ${role() == "participants" ? "bg-white shadow-xs" : ""}`}>
+                            Participants
+                        </button>
+                        {/* Garis pemisah */}
+                        <div class="w-[1px] self-stretch bg-[#F72585]/40 my-1"></div>
+                        <button
+                            onClick={() => setRole("host")}
+                            class={`text-[#F72585] text-2xl font-bold py-3 
+                            px-8 rounded-xl cursor-pointer
+                            ${role() == "host" ? "bg-white shadow-xs" : ""}`}>
+                            Host
+                        </button>
+                    </div>
 
                     {/* Steps */}
                     <div class="flex flex-col items-center gap-5">
@@ -78,9 +80,13 @@ const Home = () => {
                 </div>
 
                 <div style={{"background-image" : `url(${bgImage})`}}
-                class="bg-cover bg-center bg-no-repeat min-h-screen w-screen"
+                class="bg-cover bg-center bg-no-repeat w-screen flex justify-center"
                 >
-                    
+                    <div class="w-[60%]">
+                        <p class="text-center font-jakarta-sans text-white m-17 font-bold text-5xl">What can you play?</p>
+                        <p class="text-center font-jakarta-sans text-white m-17 text-xl">Four types of challenges, endless ways to connect. What will your next turn bring?</p>
+                        <RectangleGrid />
+                    </div>
                 </div>
             </main>
         </>
