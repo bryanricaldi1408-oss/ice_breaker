@@ -39,25 +39,25 @@ const Home = () => {
                 <div class="min-h-screen w-[85%] flex flex-col items-center">
                     <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
 
-                    {/* Tombol Participants atau Host */}
-                    <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
-                        <button
-                            onClick={() => setRole("participants")} 
-                            class={`text-[#F72585] text-2xl font-bold py-3 
-                            px-8 rounded-xl cursor-pointer
-                            ${role() == "participants" ? "bg-white shadow-xs" : ""}`}>
-                            Participants
-                        </button>
-                        {/* Garis pemisah */}
-                        <div class="w-[1px] self-stretch bg-[#F72585]/40 my-1"></div>
-                        <button
-                            onClick={() => setRole("host")}
-                            class={`text-[#F72585] text-2xl font-bold py-3 
-                            px-8 rounded-xl cursor-pointer
-                            ${role() == "host" ? "bg-white shadow-xs" : ""}`}>
-                            Host
-                        </button>
-                    </div>
+                {/* Tombol Participants atau Host */}
+                <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
+                    <button
+                        onClick={() => setRole("participants")} 
+                        class={`text-[#F72585] text-2xl font-bold py-3 
+                        px-8 rounded-xl cursor-pointer
+                        ${role() == "participants" ? "bg-white shadow-xs" : ""}`}>
+                        Participants
+                    </button>
+                    {/* Garis pemisah */}
+                    <div class="w-px self-stretch bg-[#F72585]/40 my-1"></div>
+                    <button
+                        onClick={() => setRole("host")}
+                        class={`text-[#F72585] text-2xl font-bold py-3 
+                        px-8 rounded-xl cursor-pointer
+                        ${role() == "host" ? "bg-white shadow-xs" : ""}`}>
+                        Host
+                    </button>
+                </div>
 
                     {/* Steps */}
                     <div class="flex flex-col items-center gap-5">
