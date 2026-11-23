@@ -1,16 +1,18 @@
 import {Header} from "./Header"
 import { Route, Router } from "@solidjs/router"
-import Card from "./Card";
 import Home from "./Home"
 import RoomCode from "./RoomCode";
 import "./css/style.css"
-
+import MainLayout from "./MainLayout";
 const App = () => {
     return (
         <>
-            <Router root={Header}>
-                <Route path="/" component={Home} />
-                <Route path="/room-code" component={RoomCode} />
+            <Router>
+                <Route component={MainLayout}>
+                    <Route path="/" component={Home} /> 
+                </Route>
+
+                <Route path="/room-code" component={RoomCode}/>
             </Router> 
         </>
     )    
