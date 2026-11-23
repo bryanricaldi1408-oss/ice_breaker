@@ -37,7 +37,7 @@ const RectangleGrid = () => {
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <For each={rectangleContent}>
                     {(item) => (
-                        <div class="h-[50vh] bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow">
+                        <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow">
                             <img 
                               src={item.icon}
                               class="w-24 h-24 object-contain mb-4"
