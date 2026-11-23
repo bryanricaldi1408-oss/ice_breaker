@@ -35,8 +35,9 @@ const Home = () => {
 
     return (
         <>
-            <main class="flex flex-col min-h-screen w-screen items-center my-7">
-                <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
+            <main class="flex flex-col min-h-screen w-screen items-center mt-7">
+                <div class="min-h-screen w-[85%] flex flex-col items-center">
+                    <p class="text-center text-4xl font-bold text-[#7209B7]">Start your Game!</p>
 
                 {/* Tombol Participants atau Host */}
                 <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 w-fit bg-[#FDE3EF] p-2 rounded-2xl m-5">
@@ -58,21 +59,22 @@ const Home = () => {
                     </button>
                 </div>
 
-                {/* Steps */}
-                <div class="flex flex-col items-center">
-                    <p class="text-center text-sm font-medium mb-5">{current().subtitle}</p>
-                    <div class="flex flex-row flex-wrap w-auto justify-center gap-5">
-                        <For each={current().steps}>
-                            {(item, index) => (
-                                <Card
-                                    number={item.number}
-                                    step={item.step}
-                                    desc={item.desc}
-                                />
-                            )}
-                        </For>
+                    {/* Steps */}
+                    <div class="flex flex-col items-center gap-5">
+                        <p class="text-center text-sm font-medium">{current().subtitle}</p>
+                        <div class="flex flex-1 flex-row flex-wrap w-full justify-center items-stretch gap-5">
+                            <For each={current().steps}>
+                                {(item, index) => (
+                                    <Card
+                                        number={item.number}
+                                        step={item.step}
+                                        desc={item.desc}
+                                    />
+                                )}
+                            </For>
+                        </div>
                     </div>
-                    <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-[75%]">{current().buttonText}</button>
+                    <button onClick={() => navigate("/room-code")} class="font-jakarta-sans font-bold bg-[#7209B7] hover:bg-[#8a21cf] p-2 m-5 text-white rounded-2xl w-full">{current().buttonText}</button>
                 </div>
 
                 <div style={{"background-image" : `url(${bgImage})`}}

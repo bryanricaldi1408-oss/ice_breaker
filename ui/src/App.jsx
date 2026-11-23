@@ -3,6 +3,7 @@ import { Route, Router } from "@solidjs/router"
 import Home from "./Home"
 import RoomCode from "./RoomCode";
 import "./css/style.css"
+
 import MainLayout from "./MainLayout";
 const App = () => {
     return (
