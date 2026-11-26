@@ -328,7 +328,6 @@ const Admin = () => {
         { key: "move", label: "Move", icon: moveIcon },
         { key: "talk", label: "Talk", icon: talkIcon },
         { key: "create", label: "Create", icon: createIcon },
-        { key: "wildcard", label: "Wildcard", icon: wildIcon },
     ]
 
     return (

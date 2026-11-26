@@ -1,8 +1,8 @@
 
-import moveIcon from "./assets/move.svg";
-import talkIcon from "./assets/talk.svg";
-import createIcon from "./assets/create.svg";
-import wildcardIcon from "./assets/wildcard.svg";
+import moveIcon from "./assets/move.png";
+import talkIcon from "./assets/talk.png";
+import createIcon from "./assets/create.png";
+import wildcardIcon from "./assets/wild.png";
 
 const rectangleContent = [
   {

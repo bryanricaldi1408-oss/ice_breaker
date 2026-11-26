@@ -9,6 +9,7 @@ import WaitingRoom from "./WaitingRoom";
 import Preview from "./Preview";
 
 import MainLayout from "./MainLayout";
+import Admin from "./Admin";
 const App = () => {
     return (
         <>
@@ -20,6 +21,7 @@ const App = () => {
                 </Route>
 
                 <Route path="/waiting-room" component={WaitingRoom} />
+                <Route path="/admin" component={Admin} />
                 <Route path="/room-code" component={RoomCode}/>
                 <Route path="/preview" component={Preview}/>
             </Router> 
