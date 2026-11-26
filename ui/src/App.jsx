@@ -8,7 +8,6 @@ import DisplayCode from "./DisplayCode";
 import WaitingRoom from "./WaitingRoom";
 
 import MainLayout from "./MainLayout";
-import DisplayCode from "./DisplayCode";
 const App = () => {
     return (
         <>
