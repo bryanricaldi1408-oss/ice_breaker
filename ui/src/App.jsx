@@ -6,6 +6,7 @@ import CreateGame from "./CreateGame";
 import "./css/style.css"
 import DisplayCode from "./DisplayCode";
 import WaitingRoom from "./WaitingRoom";
+import Preview from "./Preview";
 
 import MainLayout from "./MainLayout";
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 
                 <Route path="/waiting-room" component={WaitingRoom} />
                 <Route path="/room-code" component={RoomCode}/>
+                <Route path="/preview" component={Preview}/>
             </Router> 
         </>
     )    
