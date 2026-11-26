@@ -32,25 +32,25 @@ const rectangleContent = [
 ];
 
 const RectangleGrid = () => {
-    return (
-        <>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <For each={rectangleContent}>
-                    {(item) => (
-                        <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow">
-                            <img 
-                              src={item.icon}
-                              class="w-24 h-24 object-contain mb-4"
-                            />
-                            <p class="font-jakarta-sans text-gray text-3xl font-bold">{item.title}</p>
-                            <hr class="w-full my-3 border-gray-300" />
-                            <p class="font-jakarta-sans">{item.description}</p>
-                        </div>
-                    )}
-                </For>
+  return (
+    <>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <For each={rectangleContent}>
+          {(item) => (
+            <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center shadow">
+              <img
+                src={item.icon}
+                class="w-24 h-24 object-contain mb-4"
+              />
+              <p class="font-jakarta-sans text-gray text-3xl font-bold">{item.title}</p>
+              <hr class="w-full my-3 border-gray-300" />
+              <p class="font-jakarta-sans">{item.description}</p>
             </div>
-        </>
-    )
+          )}
+        </For>
+      </div>
+    </>
+  )
 }
 
 export default RectangleGrid;
